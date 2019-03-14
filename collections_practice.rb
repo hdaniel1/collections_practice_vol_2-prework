@@ -67,3 +67,18 @@ def find_cool(hash)
   end
   new
 end
+
+def organize_schools(schools)
+  new = {}
+  schools.each do |school, info|
+      location = info[:location]
+      new[location] = []
+      new.each do |keys, values|
+        if keys == info[:location]
+          return school
+        end
+      end
+    end
+
+  new
+end
