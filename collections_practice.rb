@@ -56,13 +56,11 @@ def merge_data(keys, data)
 end
 
 def find_cool(hash)
-  counter = 0
   new = []
-  new2 = {}
   hash.each do |array|
-    array.each do |keys, values|
-      new.push(keys)
-      new.push(values)
+    temp = array[:temperature]
+    if temp == 'cool'
+      new.push(array)
     end
   end
   new
