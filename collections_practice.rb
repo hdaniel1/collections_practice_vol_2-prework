@@ -77,7 +77,7 @@ def organize_schools(schools)
       schools.each do |school_name, area2|
         location = area2[:location]
         if area_key == location
-          organized_hash[location_key] << school_name
+          organized_hash[area_key] << school_name
         end
       end
     end
