@@ -69,17 +69,14 @@ end
 def organize_schools(schools)
   new = {}
   schools.each do |school, info|
-    new2 = []
-      location = info[:location]
-      info.each do |info, values|
-        if values == location
-          new.push(school)
-        end
-        end
-        new[location] = new2
+  new2 = []
+  location = info[:location]
+    info.each do |info, values|
+      if values == location
+        new.push(school)
       end
-      new
     end
-
-  new
+  new[location] = new2
+end
+new
 end
