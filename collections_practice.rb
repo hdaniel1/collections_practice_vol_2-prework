@@ -75,8 +75,9 @@ def organize_schools(schools)
       if values == location
         new2.push(school)
       end
+      new[location] = new2
     end
-  new[location] = new2
+
 end
 new
 end
