@@ -77,7 +77,6 @@ def organize_schools(schools)
       end
       new[location] = new2
     end
-
-end
-new
+  end
+  new
 end
