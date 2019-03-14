@@ -72,7 +72,7 @@ def organize_schools(schools)
     new2 = []
       location = info[:location]
       info.each do |info, values|
-        if values == location 
+        if values == location
           new.push(school)
         end
         end
