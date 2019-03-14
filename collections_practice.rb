@@ -68,7 +68,7 @@ end
 
 def organize_schools(schools)
   new = {}
-  school_hash.each do |school, area|
+  schools.each do |school, area|
     location = area[:location]
     new[location] = []
   end
@@ -82,5 +82,5 @@ def organize_schools(schools)
       end
     end
   end
-  organized_hash
+  new
 end
