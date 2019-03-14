@@ -71,12 +71,14 @@ def organize_schools(schools)
   schools.each do |school, info|
   location = info[:location]
   new[location] = []
-  end
-    info.each do |info, values|
-      if values == location
-        new2.push(school)
+end
+  new.each do |area|
+    area.each do |area_key, array_of_schools|
+      schools.each do |school, info|
+        if area_key == new[:location]
+          new[location_key] << school
+        end
       end
-      new[location] = new2
     end
   end
   new
