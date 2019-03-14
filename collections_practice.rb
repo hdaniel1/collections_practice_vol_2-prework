@@ -66,17 +66,17 @@ def find_cool(hash)
   new
 end
 
-def organize_schools(school_hash)
-  organized_hash = {}
-  school_hash.each do |school_name, location_hash|
-    location = location_hash[:location]
-    organized_hash[location] = []
+def organize_schools(schools)
+  new = {}
+  school_hash.each do |school, area|
+    location = area[:location]
+    new[location] = []
   end
-  organized_hash.each do |schools_by_location|
-    schools_by_location.each do |location_key, array_of_schools|
-      school_hash.each do |school_name, location_hash|
-        location = location_hash[:location]
-        if location_key == location
+  new.each do |area|
+    area.each do |area_key, list|
+      schools.each do |school_name, area2|
+        location = area2[:location]
+        if area_key == location
           organized_hash[location_key] << school_name
         end
       end
