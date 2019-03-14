@@ -76,7 +76,7 @@ end
     area.each do |area_key, array_of_schools|
       schools.each do |school, info|
         if area_key == new[:location]
-          new[location_key] << school
+          new[area_key] << school
         end
       end
     end
